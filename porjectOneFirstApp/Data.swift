@@ -13,7 +13,7 @@ import UIKit
 var lists = [List]()
 var availableList: List?
 
-var selectedListIndex: Int = 0
+var selectedListIndex: Int!
 
 class List {
     

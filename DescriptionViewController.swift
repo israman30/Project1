@@ -14,14 +14,15 @@ class DescriptionViewController: UIViewController {
     
     @IBOutlet weak var descriptionTextField: UITextView!
    
-    var selectedTaskIndex: Int!
-    var selectedListIndex: Int!
+    var selectedTask: Item!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         
-        descriptionLabel.text! = lists[selectedListIndex].items[selectedTaskIndex].title 
+        descriptionLabel.text = selectedTask.title
+        
+        
     
     }
 

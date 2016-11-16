@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D08FFF65AFD1943EE1CB6C84AC4676DC1F8A6DDB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D08FFF65AFD1943EE1CB6C84AC4676DC1F8A6DDB" : 9223372036854775807,
+    "F9B6B44C609B4ABCA704014C65909728D5FB8102" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "29FA74D2-D3A0-4BB9-B092-2669AE7EB826",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D08FFF65AFD1943EE1CB6C84AC4676DC1F8A6DDB" : "projectOneFirstApp\/",
+    "F9B6B44C609B4ABCA704014C65909728D5FB8102" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "porjectOneFirstApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "porjectOneFirstApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/israman30\/Project1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D08FFF65AFD1943EE1CB6C84AC4676DC1F8A6DDB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wilks7\/iOSI-Lab.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F9B6B44C609B4ABCA704014C65909728D5FB8102"
+    }
+  ]
+}

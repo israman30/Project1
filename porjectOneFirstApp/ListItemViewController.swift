@@ -14,18 +14,18 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var inputTextOutlet: UITextField!
     
+    var selectedList: List!
+    
     var cellID = "secondCell"
     
     @IBAction func tapButton(_ sender: UIButton) {
-        let otherItem = Item.init(title: inputTextOutlet.text!, description: "")
-        lists[selectedListIndex].items.append(otherItem)
+        let otherItem = Item(title: inputTextOutlet.text!, description: "")
+        selectedList.items.append(otherItem)
         tableViewOutlet.reloadData()
         inputTextOutlet.resignFirstResponder()
         
-        
     }
     
-    var selectedListIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +33,12 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lists[selectedListIndex].items.count
+        return selectedList.items.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
         
-        cell.nameLabel.text = lists[selectedListIndex].items[indexPath.row].title
+        cell.nameLabel.text = selectedList.items[indexPath.row].title
         return cell
     }
     
@@ -46,7 +46,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: this function will be take the values and segue to the next veiw controller
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let descriptionData = segue.destination as! DescriptionViewController
-        descriptionData.selectedTaskIndex = tableViewOutlet.indexPathForSelectedRow?.row
+        let descriptionViewController = segue.destination as! DescriptionViewController
+        descriptionViewController.selectedTask = selectedList.items[(tableViewOutlet.indexPathForSelectedRow?.row)!]
     }
 }

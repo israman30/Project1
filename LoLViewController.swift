@@ -9,7 +9,7 @@
 import UIKit
 
 class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
- 
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     @IBOutlet weak var imputTextField: UITextField!
@@ -25,14 +25,11 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     
-    
-    
-    
     var myItem = "firstCell"
     
     
     //MARK: Data Source and Delegates
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
     }
@@ -42,7 +39,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: myItem, for: indexPath) as! FirstTableViewCell
         
         cell.nameLabel.text = lists[indexPath.row].title
-
+        
         return cell
     }
     
@@ -50,10 +47,10 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
     }
     // MARK: This function prepares the data to go to the display controller
- 
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let data = segue.destination as! ListItemViewController
-            data.selectedListIndex = tableViewOutlet.indexPathForSelectedRow?.row
+        let listItemViewController = segue.destination as! ListItemViewController
+        listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]
         
     }
     
