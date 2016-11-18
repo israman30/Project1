@@ -18,14 +18,23 @@ class DescriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
         descriptionLabel.text = selectedTask.title
+        descriptionTextField.text = selectedTask.description
         
-        
-    
+        descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
+        descriptionTextField.clipsToBounds = true
+        descriptionTextField.layer.masksToBounds = true
+        descriptionTextField.layer.cornerRadius = 10
+
     }
 
+    @IBAction func saveDetail(_ sender: UIBarButtonItem) {
+        selectedTask.description = descriptionTextField.text
+        
+    }
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

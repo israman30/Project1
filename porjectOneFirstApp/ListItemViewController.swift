@@ -43,10 +43,19 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    //MARK: this function will be take the values and segue to the next veiw controller
+    //MARK: This function will be take the values and segue to the next veiw controller
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let descriptionViewController = segue.destination as! DescriptionViewController
         descriptionViewController.selectedTask = selectedList.items[(tableViewOutlet.indexPathForSelectedRow?.row)!]
+    }
+    
+    
+    // MARK: This function will delete a row used on the table view
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            selectedList.items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+        }
     }
 }
