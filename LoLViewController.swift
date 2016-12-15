@@ -53,6 +53,8 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]
         
     }
+    
+    // This function delete a row from the table view 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             lists.remove(at: indexPath.row)

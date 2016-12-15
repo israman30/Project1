@@ -14,7 +14,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var inputTextOutlet: UITextField!
     
-    var selectedList: List!
+    var selectedList: List! // This line contain the value of List of list
     
     var cellID = "secondCell"
     
@@ -31,7 +31,8 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
     }
-
+    
+    // MARK: Data source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedList.items.count
     }

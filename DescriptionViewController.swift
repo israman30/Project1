@@ -14,7 +14,7 @@ class DescriptionViewController: UIViewController {
     
     @IBOutlet weak var descriptionTextField: UITextView!
    
-    var selectedTask: Item!
+    var selectedTask: Item! // This line save all the data from the List of Items Table View
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class DescriptionViewController: UIViewController {
         descriptionLabel.text = selectedTask.title
         descriptionTextField.text = selectedTask.description
         
+        // This lines give the radius corner of the UI Text View
         descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
@@ -29,6 +30,7 @@ class DescriptionViewController: UIViewController {
 
     }
 
+    // This function will save the data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
         selectedTask.description = descriptionTextField.text
         
