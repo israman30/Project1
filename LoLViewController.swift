@@ -21,7 +21,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         selectedListIndex = lists.count
         tableViewOutlet.reloadData()
         imputTextField.resignFirstResponder()
-        
+        Model.shared.persistListToDefaults()
     }
     
     
@@ -45,6 +45,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     // MARK: This function prepares the data to go to the display controller
     
