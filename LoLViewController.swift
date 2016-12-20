@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var lists = [List]()
+    
+    
+//    func createNote(title: String, content: String) {
+//        
+//        let notesRef = FIRDatabase.database().reference(withPath: "notes")
+//        let note = List(title: title, date: Date().format())
+//        let noteRef = notesRef.child(title)
+//        noteRef.setValue(note.toAnyObject())
+//    }
+
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     @IBOutlet weak var imputTextField: UITextField!
