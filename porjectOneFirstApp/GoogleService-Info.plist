@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>893423027736-rp5rbg4j5rr8abk0jjachh00r29h93bb.apps.googleusercontent.com</string>
+	<string>553036923132-i7aargmd3nfrv4eib5ro4fg47nvj9h11.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.893423027736-rp5rbg4j5rr8abk0jjachh00r29h93bb</string>
+	<string>com.googleusercontent.apps.553036923132-i7aargmd3nfrv4eib5ro4fg47nvj9h11</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBNXRZ8O7NDFooN-jgDR5ParX4Y_aZHC9k</string>
+	<string>AIzaSyCuLHMRDQ9QmhqfkS7ikBo46CZnag3DXzw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>893423027736</string>
+	<string>553036923132</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.inclass.FireBaseLesson</string>
+	<string>com.israel</string>
 	<key>PROJECT_ID</key>
-	<string>fir-lesson-b7cd6</string>
+	<string>to-do-list-project-6b6da</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-lesson-b7cd6.appspot.com</string>
+	<string>to-do-list-project-6b6da.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:893423027736:ios:dfced23a191c38dc</string>
+	<string>1:553036923132:ios:2a3578494664c42b</string>
 	<key>DATABASE_URL</key>
-	<string>https://fir-lesson-b7cd6.firebaseio.com</string>
+	<string>https://to-do-list-project-6b6da.firebaseio.com</string>
 </dict>
 </plist>

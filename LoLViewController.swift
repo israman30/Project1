@@ -13,15 +13,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     var lists = [List]()
     
-    
-//    func createNote(title: String, content: String) {
-//        
-//        let notesRef = FIRDatabase.database().reference(withPath: "notes")
-//        let note = List(title: title, date: Date().format())
-//        let noteRef = notesRef.child(title)
-//        noteRef.setValue(note.toAnyObject())
-//    }
-
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     @IBOutlet weak var imputTextField: UITextField!
@@ -32,14 +23,45 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         lists.append(newList)
         selectedListIndex = lists.count
         tableViewOutlet.reloadData()
-        imputTextField.resignFirstResponder()
-        
+        createList(title: imputTextField.text!)
     }
     
+    func createList(title: String) {
+        
+        let listsRef = FIRDatabase.database().reference(withPath: "lists")
+        let list = List(title: title)
+        let listRef = listsRef.child(title)
+        listRef.setValue(list.toAnyObject())
+    }
     
-    var myItem = "firstCell"
+    func updateLists(newTitle: String, items: [Item], list: List) {
+        if list.title == newTitle {
+            list.ref?.updateChildValues(["items" : [Item].self])
+        } else {
+            list.ref?.removeValue()
+            createList(title: newTitle)
+        }
+    }
+    func didUpdatedList(snapshot: FIRDataSnapshot) {
+        lists.removeAll()
+        for item in snapshot.children {
+            let list = List(snapshot: item as! FIRDataSnapshot)
+            self.lists.append(list)
+        }
+        tableViewOutlet.reloadData()
+    }
+
     
+    func listenForLists() {
+        let lists = FIRDatabase.database().reference(withPath: "lists")
+        lists.observe(.value, with: didUpdatedList)
+    }
     
+    func deleteList(list: List) {
+        list.ref?.removeValue()
+    }
+    
+
     //MARK: Data Source and Delegates
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +70,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: myItem, for: indexPath) as! FirstTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath) as! FirstTableViewCell
         
         cell.nameLabel.text = lists[indexPath.row].title
         
@@ -57,13 +79,13 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listenForLists()
     }
     // MARK: This function prepares the data to go to the display controller
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listItemViewController = segue.destination as! ListItemViewController
         listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]
-        
     }
     
     // This function delete a row from the table view 
