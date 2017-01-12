@@ -24,12 +24,50 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         selectedList.items.append(otherItem)
         tableViewOutlet.reloadData()
         inputTextOutlet.resignFirstResponder()
-        
+//        createTask(item: otherItem)   // you are passing in an item
+    }
+    
+    func createTask(item: String){  // you are taking a snapshot here
+        if let itemTitle = inputTextOutlet.text, !itemTitle.isEmpty {
+        let taskRef = selectedList.ref
+        let item = Item(item: itemTitle)
+        let itemRef = taskRef?.child(itemTitle)
+            itemRef?.setValue(item.toAnyObject)
+        }
+    }
+    
+    /*
+     func createItem(itemTitle: String) {
+     //if let itemTitle = ItemTextFieldOutlet.text, !itemTitle.isEmpty {
+     let listRef = lists[currentItemIndex].ref
+     let item = Item(itemTitle: itemTitle)
+     let itemRef = listRef?.child(itemTitle)
+     itemRef?.setValue(item.toAnyObject())
+     //}
+     }     */
+    
+    
+    func didUpdatedItems(snapshot: FIRDataSnapshot) {
+        lists.removeAll()
+        for items in snapshot.children {
+            let tasks = Item(snapshot: items as! FIRDataSnapshot)
+          selectedList.items.append(tasks)
+        }
+        let item = Item(snapshot: description as! FIRDataSnapshot)
+        DispatchQueue.main.async {
+            self.tableViewOutlet.reloadData()
+        }
+    }
+
+    func listenForItems() {
+        let item = selectedList.ref
+        item?.observe(.value, with: didUpdatedItems)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listenForItems()
 
     }
     

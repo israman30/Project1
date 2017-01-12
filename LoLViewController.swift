@@ -15,15 +15,15 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-    @IBOutlet weak var imputTextField: UITextField!
+    @IBOutlet weak var inputTextField: UITextField!
     
     @IBAction func addButton(_ sender: UIButton) {
         
-        let newList = List(title: imputTextField.text!)
+        let newList = List(title: inputTextField.text!)
         lists.append(newList)
         selectedListIndex = lists.count
         tableViewOutlet.reloadData()
-        createList(title: imputTextField.text!)
+        createList(title: inputTextField.text!)
     }
     
     func createList(title: String) {
@@ -48,10 +48,12 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
             let list = List(snapshot: item as! FIRDataSnapshot)
             self.lists.append(list)
         }
-        tableViewOutlet.reloadData()
+        DispatchQueue.main.async {
+            self.tableViewOutlet.reloadData()
+        }
+        
     }
 
-    
     func listenForLists() {
         let lists = FIRDatabase.database().reference(withPath: "lists")
         lists.observe(.value, with: didUpdatedList)
