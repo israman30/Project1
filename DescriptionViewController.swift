@@ -10,6 +10,8 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
 
+    var model = Model()
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var descriptionTextField: UITextView!
@@ -32,7 +34,7 @@ class DescriptionViewController: UIViewController {
 
     // This function will save the data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
-        selectedTask.description = descriptionTextField.text
+        selectedTask.descriptions = descriptionTextField.text
         
     }
    

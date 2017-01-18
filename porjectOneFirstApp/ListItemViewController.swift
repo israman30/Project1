@@ -10,6 +10,9 @@ import UIKit
 
 class ListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let model = Model()
+    
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     @IBOutlet weak var inputTextOutlet: UITextField!
@@ -19,10 +22,10 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     var cellID = "secondCell"
     
     @IBAction func tapButton(_ sender: UIButton) {
-        let otherItem = Item(title: inputTextOutlet.text!, description: "")
-        selectedList.items.append(otherItem)
-        tableViewOutlet.reloadData()
-        inputTextOutlet.resignFirstResponder()
+//        let otherItem = Item(title: inputTextOutlet.text!, descriptions: "")
+//        selectedList.items.append(otherItem)
+//        tableViewOutlet.reloadData()
+//        inputTextOutlet.resignFirstResponder()
         
     }
     
@@ -34,12 +37,12 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: Data source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedList.items.count
+        return selectedList.items!.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
         
-        cell.nameLabel.text = selectedList.items[indexPath.row].title
+//        cell.nameLabel.text = selectedList.items[indexPath.row].title
         return cell
     }
     
@@ -47,16 +50,16 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: This function will be take the values and segue to the next veiw controller
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let descriptionViewController = segue.destination as! DescriptionViewController
-        descriptionViewController.selectedTask = selectedList.items[(tableViewOutlet.indexPathForSelectedRow?.row)!]
+//        let descriptionViewController = segue.destination as! DescriptionViewController
+////        descriptionViewController.selectedTask = selectedList.items[(tableViewOutlet.indexPathForSelectedRow?.row)!]
     }
     
     
     // MARK: This function will delete a row used on the table view
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            selectedList.items.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
-        }
+//        if editingStyle == UITableViewCellEditingStyle.delete {
+//            selectedList.items.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+//        }
     }
 }

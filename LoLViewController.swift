@@ -10,18 +10,25 @@ import UIKit
 
 class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var lists = [List]()
+    let model = Model()
+    var selectedListIndex: Int!
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     @IBOutlet weak var imputTextField: UITextField!
     
     @IBAction func addButton(_ sender: UIButton) {
         
-        let newList = List(title: imputTextField.text!)
-        lists.append(newList)
-        selectedListIndex = lists.count
-        tableViewOutlet.reloadData()
-        imputTextField.resignFirstResponder()
+//        let newList = List(title: imputTextField.text!)
+//        lists.append(newList)
+//        selectedListIndex = lists.count
         
+//        imputTextField.resignFirstResponder()
+        let listText = imputTextField.text!
+//        imputTextField.text = ""
+        model.createLis(title: listText)
+        tableViewOutlet.reloadData()
     }
     
     
@@ -45,6 +52,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     // MARK: This function prepares the data to go to the display controller
     
