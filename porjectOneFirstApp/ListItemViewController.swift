@@ -32,10 +32,12 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
        
     }
     
+    
     // MARK: Data source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedList.items.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
         

@@ -27,14 +27,13 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 10
-
     }
 
+    
     // This function will save the data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
         selectedTask.description1 = descriptionTextField.text
         Model.shared.persistListToDefaults()
-        
     }
    
     
@@ -42,6 +41,4 @@ class DescriptionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
-
 }

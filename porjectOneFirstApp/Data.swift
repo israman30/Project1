@@ -27,9 +27,7 @@ static let shared = Model()
            lists = peps
         }
     }
-
 }
-
 
 var lists = [List]()
 var availableList: List?
@@ -63,7 +61,6 @@ class List: NSObject, NSCoding {
 
 class Item: NSObject, NSCoding {
     
-    
     private struct Keys {
         static let title = "title"
         static let description1 = "description1"
@@ -90,6 +87,5 @@ class Item: NSObject, NSCoding {
         aCoder.encode(title, forKey: Keys.title)
         aCoder.encode(description1, forKey: Keys.description1)
     }
-    
     
 }
