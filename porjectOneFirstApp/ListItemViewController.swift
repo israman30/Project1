@@ -19,23 +19,25 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     var cellID = "secondCell"
     
     @IBAction func tapButton(_ sender: UIButton) {
-        let otherItem = Item(title: inputTextOutlet.text!, description: "")
+        let otherItem = Item(title: inputTextOutlet.text!, description1: "")
         selectedList.items.append(otherItem)
         tableViewOutlet.reloadData()
         inputTextOutlet.resignFirstResponder()
-        
+        Model.shared.persistListToDefaults()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
     }
+    
     
     // MARK: Data source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedList.items.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
         

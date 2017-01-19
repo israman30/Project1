@@ -20,20 +20,20 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
         
         descriptionLabel.text = selectedTask.title
-        descriptionTextField.text = selectedTask.description
+        descriptionTextField.text = selectedTask.description1
         
         // This lines give the radius corner of the UI Text View
         descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 10
-
     }
 
+    
     // This function will save the data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
-        selectedTask.description = descriptionTextField.text
-        
+        selectedTask.description1 = descriptionTextField.text
+        Model.shared.persistListToDefaults()
     }
    
     
@@ -41,6 +41,4 @@ class DescriptionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
-
 }

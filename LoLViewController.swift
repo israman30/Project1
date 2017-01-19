@@ -21,9 +21,8 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         selectedListIndex = lists.count
         tableViewOutlet.reloadData()
         imputTextField.resignFirstResponder()
-        
+        Model.shared.persistListToDefaults()
     }
-    
     
     var myItem = "firstCell"
     
@@ -45,14 +44,17 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
+    
+    
     // MARK: This function prepares the data to go to the display controller
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listItemViewController = segue.destination as! ListItemViewController
         listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]
-        
     }
+    
     
     // This function delete a row from the table view 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -61,5 +63,4 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
         }
     }
-    
 }
