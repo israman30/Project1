@@ -45,6 +45,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D10807E1E6F0BBC00824319 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8D60424E1DDB5633007BF405 /* Main.storyboard */,
+				8D6042511DDB5633007BF405 /* Assets.xcassets */,
+				8D6042531DDB5633007BF405 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		8D10807F1E6F0BDD00824319 /* Outlets */ = {
+			isa = PBXGroup;
+			children = (
+				8D6042721DDBAF50007BF405 /* FirstTableViewCell.swift */,
+				8D1299471DDCB06100AB1F07 /* SecondTableViewCell.swift */,
+			);
+			name = Outlets;
+			sourceTree = "<group>";
+		};
+		8D1080801E6F0BF100824319 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				8D6042701DDBAACB007BF405 /* LoLViewController.swift */,
+				8D1299451DDCAE6100AB1F07 /* ListItemViewController.swift */,
+				8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
 		8D60423E1DDB5633007BF405 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +93,9 @@
 		8D6042491DDB5633007BF405 /* porjectOneFirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				8D10807E1E6F0BBC00824319 /* UI */,
 				8D60426B1DDB726D007BF405 /* SwiftFiles */,
 				8D60425E1DDB61F4007BF405 /* Logic */,
-				8D60424E1DDB5633007BF405 /* Main.storyboard */,
-				8D6042511DDB5633007BF405 /* Assets.xcassets */,
-				8D6042531DDB5633007BF405 /* LaunchScreen.storyboard */,
 				8D6042561DDB5633007BF405 /* Info.plist */,
 			);
 			path = porjectOneFirstApp;
@@ -78,11 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				8D60424A1DDB5633007BF405 /* AppDelegate.swift */,
-				8D6042701DDBAACB007BF405 /* LoLViewController.swift */,
-				8D1299451DDCAE6100AB1F07 /* ListItemViewController.swift */,
-				8D6042721DDBAF50007BF405 /* FirstTableViewCell.swift */,
-				8D1299471DDCB06100AB1F07 /* SecondTableViewCell.swift */,
-				8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */,
+				8D1080801E6F0BF100824319 /* VCs */,
+				8D10807F1E6F0BDD00824319 /* Outlets */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
