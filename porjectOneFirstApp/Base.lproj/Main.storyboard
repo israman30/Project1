@@ -67,7 +67,7 @@
                                                         <constraint firstAttribute="width" constant="327" id="Gov-cI-5dj"/>
                                                         <constraint firstAttribute="height" constant="44" id="cC5-SQ-ADe"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -178,7 +178,7 @@
                                                         <constraint firstAttribute="height" constant="35" id="ZcE-kQ-oV0"/>
                                                         <constraint firstAttribute="width" constant="327" id="tq2-Z0-aV4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
