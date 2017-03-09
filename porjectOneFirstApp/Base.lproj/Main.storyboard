@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="482" id="nhP-9a-FsQ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="firstCell" rowHeight="80" id="NHb-Hs-sUI" customClass="FirstTableViewCell" customModule="porjectOneFirstApp" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="firstCell" rowHeight="80" id="NHb-Hs-sUI" customClass="FirstTableViewCell" customModule="porjectOneFirstApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHb-Hs-sUI" id="Mqc-p8-k5Y">
@@ -213,7 +213,7 @@
                                     <action selector="tapButton:" destination="clK-oZ-Z7R" eventType="touchUpInside" id="tZc-Sk-iRv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here your taks" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-12-z45">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here your taks" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-12-z45">
                                 <rect key="frame" x="16" y="101" width="283" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EPk-TM-lKO"/>
