@@ -13,7 +13,7 @@
         <scene sceneID="o5I-PH-6c9">
             <objects>
                 <navigationController id="Ggg-mY-dP6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mqo-e8-lPo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mqo-e8-lPo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.36782261729240417" green="0.40105926990509033" blue="0.44180232286453247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -244,7 +244,7 @@
             </objects>
             <point key="canvasLocation" x="1764" y="35.532233883058474"/>
         </scene>
-        <!--Description View Controller-->
+        <!--Chalkboard-->
         <scene sceneID="uSz-Qm-M0s">
             <objects>
                 <viewController id="fqG-YG-q5k" customClass="DescriptionViewController" customModule="porjectOneFirstApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -286,7 +286,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="aiO-8S-zW3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -306,7 +306,7 @@
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="30" id="nef-EZ-qLF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eZb-yJ-tVC">
+                    <navigationItem key="navigationItem" title="Chalkboard" id="eZb-yJ-tVC">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xFb-oi-ahT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
