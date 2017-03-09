@@ -245,7 +245,7 @@
             </objects>
             <point key="canvasLocation" x="1764" y="35.532233883058474"/>
         </scene>
-        <!--Chalkboard-->
+        <!--My Chalkboard-->
         <scene sceneID="uSz-Qm-M0s">
             <objects>
                 <viewController id="fqG-YG-q5k" customClass="DescriptionViewController" customModule="porjectOneFirstApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -307,7 +307,7 @@
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="30" id="nef-EZ-qLF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chalkboard" id="eZb-yJ-tVC">
+                    <navigationItem key="navigationItem" title="My Chalkboard" id="eZb-yJ-tVC">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xFb-oi-ahT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
