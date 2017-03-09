@@ -42,6 +42,10 @@ class DescriptionViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
    
     
     override func didReceiveMemoryWarning() {

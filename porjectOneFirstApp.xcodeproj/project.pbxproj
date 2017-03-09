@@ -151,7 +151,7 @@
 				TargetAttributes = {
 					8D6042461DDB5633007BF405 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6DC9LP75VX;
+						DevelopmentTeam = G9TBJCK73T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -319,7 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				DEVELOPMENT_TEAM = G9TBJCK73T;
 				INFOPLIST_FILE = porjectOneFirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.inclass.porjectOneFirstApp;
@@ -332,7 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				DEVELOPMENT_TEAM = G9TBJCK73T;
 				INFOPLIST_FILE = porjectOneFirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.inclass.porjectOneFirstApp;

@@ -33,6 +33,10 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
        
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
     // MARK: Data source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
