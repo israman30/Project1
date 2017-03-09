@@ -54,6 +54,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableViewOutlet.layer.cornerRadius = 10
     }
     
+    
     // MARK: Keyboard dismiss when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
