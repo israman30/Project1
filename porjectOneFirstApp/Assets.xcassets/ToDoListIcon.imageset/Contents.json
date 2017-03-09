@@ -11,12 +11,6 @@
     {
       "idiom" : "iphone",
       "scale" : "3x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "ToDoListIcon.jpg",
-      "unassigned" : true,
-      "scale" : "1x"
     }
   ],
   "info" : {
