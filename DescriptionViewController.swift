@@ -30,7 +30,7 @@ class DescriptionViewController: UIViewController {
     }
 
     
-    // This function will save the data entered in the text view
+    // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
         selectedTask.description1 = descriptionTextField.text
         Model.shared.persistListToDefaults()
