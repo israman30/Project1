@@ -36,20 +36,13 @@ class DescriptionViewController: UIViewController {
         if descriptionTextField.text != "" {
             selectedTask.description1 = descriptionTextField.text
             Model.shared.persistListToDefaults()
-            alert()
+
         } else {
             let alert = UIAlertController(title: "Hey!", message: "Enter a description please", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             print("Save a description please..!")
         }
-    }
-    
-    // MARK: Alert function when message is saved
-    func alert(){
-        let alert = UIAlertController(title: "Yay!", message: "It's saved", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
     
     // MARK: Keyboard dismiss when touch outside

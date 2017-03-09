@@ -312,6 +312,7 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveDetail:" destination="fqG-YG-q5k" id="Z6h-LL-Bdh"/>
+                                <segue destination="7Hv-Z6-wEp" kind="unwind" unwindAction="unwindToListWithStoryboard:" id="mmJ-tB-sSi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -321,6 +322,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42f-xy-813" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7Hv-Z6-wEp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2556" y="35.532233883058474"/>
         </scene>
