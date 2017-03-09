@@ -16,13 +16,20 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBAction func addButton(_ sender: UIButton) {
         
-        let newList = List(title: imputTextField.text!)
-        lists.append(newList)
-        selectedListIndex = lists.count
-        tableViewOutlet.reloadData()
-        imputTextField.resignFirstResponder()
-        Model.shared.persistListToDefaults()
-        imputTextField.text = ""
+        if (imputTextField.text != "") {
+            let newList = List(title: imputTextField.text!)
+            lists.append(newList)
+            selectedListIndex = lists.count
+            tableViewOutlet.reloadData()
+            imputTextField.resignFirstResponder()
+            Model.shared.persistListToDefaults()
+            imputTextField.text = ""
+        } else {
+            let alert = UIAlertController(title: "Ops!", message: "Please enter a list name", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            print("The is not list entered")
+        }
     }
     
     var myItem = "firstCell"
