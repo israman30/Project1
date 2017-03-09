@@ -19,12 +19,20 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     var cellID = "secondCell"
     
     @IBAction func tapButton(_ sender: UIButton) {
-        let otherItem = Item(title: inputTextOutlet.text!, description1: "")
-        selectedList.items.append(otherItem)
-        tableViewOutlet.reloadData()
-        inputTextOutlet.resignFirstResponder()
-        Model.shared.persistListToDefaults()
-        inputTextOutlet.text = ""
+        
+        if inputTextOutlet.text != "" {
+            let otherItem = Item(title: inputTextOutlet.text!, description1: "")
+            selectedList.items.append(otherItem)
+            tableViewOutlet.reloadData()
+            inputTextOutlet.resignFirstResponder()
+            Model.shared.persistListToDefaults()
+            inputTextOutlet.text = ""
+        } else {
+            let alert = UIAlertController(title: "Ops!", message: "Please enter a list name", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            print("Hey..!! There is not list input..!!!!")
+        }
     }
     
     
