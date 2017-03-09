@@ -14,6 +14,8 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var imputTextField: UITextField!
     
+    var myItem = "firstCell"
+    
     @IBAction func addButton(_ sender: UIButton) {
         
         if (imputTextField.text != "") {
@@ -32,7 +34,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    var myItem = "firstCell"
     
     
     //MARK: Data Source and Delegates
@@ -62,7 +63,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     // MARK: This function prepares the data to go to the display controller
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listItemViewController = segue.destination as! ListItemViewController
         listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]

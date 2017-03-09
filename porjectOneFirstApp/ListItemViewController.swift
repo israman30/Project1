@@ -59,12 +59,12 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
         
         cell.nameLabel.text = selectedList.items[indexPath.row].title
+        
         return cell
     }
     
     
     //MARK: This function will be take the values and segue to the next veiw controller
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let descriptionViewController = segue.destination as! DescriptionViewController
         descriptionViewController.selectedTask = selectedList.items[(tableViewOutlet.indexPathForSelectedRow?.row)!]

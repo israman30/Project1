@@ -21,8 +21,7 @@ class DescriptionViewController: UIViewController {
         
         descriptionLabel.text = selectedTask.title
         descriptionTextField.text = selectedTask.description1
-        
-        // This lines give the radius corner of the UI Text View
+        // This block give the radius corner of the UI Text View
         descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
