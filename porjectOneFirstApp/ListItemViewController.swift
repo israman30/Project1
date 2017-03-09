@@ -24,6 +24,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         tableViewOutlet.reloadData()
         inputTextOutlet.resignFirstResponder()
         Model.shared.persistListToDefaults()
+        inputTextOutlet.text = ""
     }
     
     
