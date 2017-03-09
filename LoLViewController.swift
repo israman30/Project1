@@ -29,7 +29,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     //MARK: Data Source and Delegates
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
     }
@@ -45,9 +44,10 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableViewOutlet.layer.cornerRadius = 10
     }
     
+    // MARK: Keyboard dismiss when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

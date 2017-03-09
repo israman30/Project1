@@ -30,9 +30,10 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       tableViewOutlet.layer.cornerRadius = 10
     }
     
+    // MARK: Keyboard dismiss when touch outside 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

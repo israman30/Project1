@@ -37,12 +37,14 @@ class DescriptionViewController: UIViewController {
         alert()
     }
     
+    // MARK: Alert function when message is saved
     func alert(){
         let alert = UIAlertController(title: "Yay!", message: "It's saved", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
+    // MARK: Keyboard dismiss when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
