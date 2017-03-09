@@ -145,7 +145,7 @@
         <!--List Item View Controller-->
         <scene sceneID="Eaz-b1-pyg">
             <objects>
-                <viewController id="clK-oZ-Z7R" customClass="ListItemViewController" customModule="porjectOneFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="list" id="clK-oZ-Z7R" customClass="ListItemViewController" customModule="porjectOneFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8tv-mh-NW5"/>
                         <viewControllerLayoutGuide type="bottom" id="NoK-Du-TXc"/>
