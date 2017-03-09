@@ -13,13 +13,14 @@
         <scene sceneID="o5I-PH-6c9">
             <objects>
                 <navigationController id="Ggg-mY-dP6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mqo-e8-lPo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mqo-e8-lPo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.36782261729240417" green="0.40105926990509033" blue="0.44180232286453247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="textShadowColor" red="0.36782261729999999" green="0.40105926990000001" blue="0.44180232289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
