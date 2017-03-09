@@ -34,6 +34,13 @@ class DescriptionViewController: UIViewController {
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
         selectedTask.description1 = descriptionTextField.text
         Model.shared.persistListToDefaults()
+        alert()
+    }
+    
+    func alert(){
+        let alert = UIAlertController(title: "Yay!", message: "It's saved", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
    
     
