@@ -34,8 +34,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    
-    
     //MARK: Data Source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
