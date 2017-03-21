@@ -24,10 +24,6 @@ This is an App that allows the user to interact ith the interface and create lis
 
 ![Alt Image Text](image/MainScreenShot.png)
 
-## Deleting a List Cell
-
-![Alt Image Text](image/DeleteScreenShot.png)
-
 ## Alert Message
 
 ![Alt Image Text](image/AlertScreenShot.png)
