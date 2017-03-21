@@ -1,7 +1,7 @@
 # To Do List App
 
 ## First iOS project
-This is an App that allows the user to interact ith the interface and create lists of tasks
+This is an App that allows the user to interact ith the interface and create lists of tasks.
 
 ## List of List
 * This App allows the user to create a new list of task
@@ -16,6 +16,22 @@ This is an App that allows the user to interact ith the interface and create lis
 * Once the the user is finish with the details of descriptions of that task, is able to save the information
 * The user is able to go back to List of List and create a new list
 
-## View 
+## Wireframe View 
 
 ![Alt Image Text](image/todo.png)
+
+## Main List View
+
+![Alt Image Text](image/MainScreenShot.png)
+
+## Deleting a List Cell
+
+![Alt Image Text](image/DeleteScreenShot.png)
+
+## Alert Message
+
+![Alt Image Text](image/AlertScreenShot.png)
+
+## Detail View
+
+![Alt Image Text](image/DetailScreenShot.png)
