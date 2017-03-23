@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Model.shared.loadPersistedListFromDefaults()
         
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (allow, error) in
             if !allow {
                 print("Action is not allowed")
