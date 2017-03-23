@@ -57,6 +57,14 @@ class DescriptionViewController: UIViewController {
         self.view.endEditing(true)
     }
    
+    // MARK: Notification picker set as reminder
+    @IBAction func datePicker(_ sender: UIDatePicker) {
+        let date = sender.date
+        print("Selcted date: \(date)")
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        delegate?.userNotification(at: date)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

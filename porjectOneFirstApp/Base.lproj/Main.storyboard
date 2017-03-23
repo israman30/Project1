@@ -59,7 +59,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHb-Hs-sUI" id="Mqc-p8-k5Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlD-xF-8e3">
@@ -170,7 +170,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Nj-zw-JOa" id="IZW-zH-8eN">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T96-2d-uIa">
@@ -282,27 +282,37 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the force!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGd-0N-cBt">
-                                <rect key="frame" x="62" y="569" width="251" height="42"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2m-Ej-DWD">
+                                <rect key="frame" x="0.0" y="506" width="375" height="82"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="aiO-8S-zW3"/>
+                                    <constraint firstAttribute="height" constant="82" id="6UK-qi-dbT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="33"/>
+                                <date key="date" timeIntervalSinceReferenceDate="511973132.27236497">
+                                    <!--2017-03-23 14:45:32 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="fqG-YG-q5k" eventType="valueChanged" id="M8H-2V-fuS"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKK-GC-DCa">
+                                <rect key="frame" x="88" y="497" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cGd-0N-cBt" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="62" id="6tf-fe-uut"/>
                             <constraint firstItem="xt1-0q-NAh" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="16" id="8fs-Xb-3bg"/>
-                            <constraint firstItem="cGd-0N-cBt" firstAttribute="top" secondItem="xt1-0q-NAh" secondAttribute="bottom" constant="123" id="DmA-ei-na9"/>
+                            <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="h2m-Ej-DWD" secondAttribute="bottom" constant="79" id="Im3-kN-rW3"/>
                             <constraint firstAttribute="trailing" secondItem="V2r-9D-BFA" secondAttribute="trailing" constant="30" id="J6H-tc-hji"/>
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="top" secondItem="QmS-No-4sc" secondAttribute="bottom" constant="17" id="Pta-5n-XJ9"/>
-                            <constraint firstAttribute="trailing" secondItem="cGd-0N-cBt" secondAttribute="trailing" constant="62" id="Q8r-zC-PCH"/>
                             <constraint firstItem="xt1-0q-NAh" firstAttribute="top" secondItem="V2r-9D-BFA" secondAttribute="bottom" constant="15" id="TTQ-qV-l3c"/>
+                            <constraint firstItem="h2m-Ej-DWD" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" id="Tao-Cd-s2B"/>
                             <constraint firstAttribute="trailing" secondItem="xt1-0q-NAh" secondAttribute="trailing" constant="16" id="WPo-Zh-so9"/>
-                            <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="cGd-0N-cBt" secondAttribute="bottom" constant="56" id="bUo-lY-75h"/>
+                            <constraint firstAttribute="trailing" secondItem="h2m-Ej-DWD" secondAttribute="trailing" id="hJJ-Sy-C5y"/>
                             <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="xt1-0q-NAh" secondAttribute="bottom" constant="221" id="muR-k1-dN4"/>
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="30" id="nef-EZ-qLF"/>
                         </constraints>
@@ -322,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42f-xy-813" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430" y="16"/>
+            <point key="canvasLocation" x="2429.5999999999999" y="15.742128935532236"/>
         </scene>
     </scenes>
     <resources>
