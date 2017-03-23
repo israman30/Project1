@@ -1,5 +1,11 @@
 # To Do List App
 
+##### by
+
+*Israel Manzo*
+
+*Developer info click [here](https://www.linkedin.com/in/israel-manzo/)*
+
 ## First iOS project
 This is an App that allows the user to interact ith the interface and create lists of tasks.
 
