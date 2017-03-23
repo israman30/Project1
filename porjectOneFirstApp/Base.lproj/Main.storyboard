@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -295,10 +296,12 @@
                                     <action selector="datePicker:" destination="fqG-YG-q5k" eventType="valueChanged" id="M8H-2V-fuS"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKK-GC-DCa">
-                                <rect key="frame" x="88" y="497" width="199" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the Force" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKK-GC-DCa">
+                                <rect key="frame" x="88" y="596" width="199" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Qiw-qH-p0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -311,10 +314,14 @@
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="top" secondItem="QmS-No-4sc" secondAttribute="bottom" constant="17" id="Pta-5n-XJ9"/>
                             <constraint firstItem="xt1-0q-NAh" firstAttribute="top" secondItem="V2r-9D-BFA" secondAttribute="bottom" constant="15" id="TTQ-qV-l3c"/>
                             <constraint firstItem="h2m-Ej-DWD" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" id="Tao-Cd-s2B"/>
+                            <constraint firstItem="hKK-GC-DCa" firstAttribute="top" secondItem="h2m-Ej-DWD" secondAttribute="bottom" constant="8" id="VA8-iZ-mUE"/>
                             <constraint firstAttribute="trailing" secondItem="xt1-0q-NAh" secondAttribute="trailing" constant="16" id="WPo-Zh-so9"/>
                             <constraint firstAttribute="trailing" secondItem="h2m-Ej-DWD" secondAttribute="trailing" id="hJJ-Sy-C5y"/>
+                            <constraint firstItem="hKK-GC-DCa" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leadingMargin" constant="72" id="kyU-cm-KMI"/>
                             <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="xt1-0q-NAh" secondAttribute="bottom" constant="221" id="muR-k1-dN4"/>
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="30" id="nef-EZ-qLF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hKK-GC-DCa" secondAttribute="trailing" constant="72" id="pdK-gm-yeR"/>
+                            <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="hKK-GC-DCa" secondAttribute="bottom" constant="38" id="tX6-5E-GfY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Chalkboard" id="eZb-yJ-tVC">
