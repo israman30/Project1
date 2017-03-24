@@ -1,4 +1,4 @@
-# To Do List App
+# To Do Chalkboard App
 
 ##### by
 
@@ -7,7 +7,7 @@
 *Developer info click [here](https://www.linkedin.com/in/israel-manzo/)*
 
 ## First iOS project
-This is an App that allows the user to interact ith the interface and create lists of tasks.
+This is an App that allows the user to create a list of task, and each list contain a detail chalkboard description. Also the application will remind the user about the list saved.
 
 ## List of List
 * This App allows the user to create a new list of task
