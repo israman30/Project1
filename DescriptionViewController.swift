@@ -13,6 +13,9 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var dateTxtField: UITextField!
+    
+    let datePicker = UIDatePicker()
    
     var selectedTask: Item! // This line save all the data from the List of Items Table View
     
@@ -46,6 +49,7 @@ class DescriptionViewController: UIViewController {
         }
     }
     
+    // MARk: Saving task description function
     func savingDescription(){
         let alert = UIAlertController(title: "Yay!", message: "You just saved your Chalkboard detail", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -56,10 +60,44 @@ class DescriptionViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-   
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func createDatePicker(){
+    
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        toolBar.setItems([doneButton], animated: false)
+        dateTxtField.inputAccessoryView = toolBar
+        
+        dateTxtField.inputView = datePicker
+        
         
     }
+    
+    func doneButton(){
+    
+        dateTxtField.text = "\(datePicker.date)"
+        self.view.endEditing(true)
+    }
+    /*
+    func createDatePicker() {
+        
+        datePicker.datePickerMode = .dateAndTime
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: false)
+        
+        deadline.inputAccessoryView = toolbar
+        deadline.inputView = datePicker
+    }
+    
+    func donePressed() {
+        deadline.text = "\(datePicker.date.prettyLocaleFormattedWithTime)"
+        self.view.endEditing(true)
+    }
+   */
 }
