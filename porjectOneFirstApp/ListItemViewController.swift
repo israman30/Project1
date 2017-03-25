@@ -42,6 +42,11 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.layer.cornerRadius = 10
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         tableViewOutlet.reloadData()
     }
     
