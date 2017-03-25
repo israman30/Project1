@@ -21,13 +21,16 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func tapButton(_ sender: UIButton) {
         
         if inputTextOutlet.text != "" {
+            
             let otherItem = Item(title: inputTextOutlet.text!, description1: "", date: "")
             selectedList.items.append(otherItem)
             tableViewOutlet.reloadData()
             inputTextOutlet.resignFirstResponder()
             Model.shared.persistListToDefaults()
             inputTextOutlet.text = ""
+            
         } else {
+            
             let alert = UIAlertController(title: "Ops!", message: "Please enter a list name", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -63,7 +66,6 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-    
     
     
     //MARK: This function will be take the values and segue to the next veiw controller

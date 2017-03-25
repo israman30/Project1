@@ -32,32 +32,30 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 10
         
-    
         createDatePicker()
         
     }
     
-
     
     // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
        
-        if descriptionTextField.text != "" && dateTxtField.text != ""{
+        if descriptionTextField.text != "" || dateTxtField.text != "" {
+            
             selectedTask.description1 = descriptionTextField.text
             selectedTask.date = dateTxtField.text!
             Model.shared.persistListToDefaults()
             
             savingDescription()
             
-            
         } else {
+            
             let alert = UIAlertController(title: "Hey!", message: "Enter a description please", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             print("Save a description please..!")
         }
     }
-    
     
     
     // MARk: Saving task description function
@@ -93,9 +91,9 @@ class DescriptionViewController: UIViewController {
         dateTxtField.inputAccessoryView = toolBar
         dateTxtField.inputView = datePicker
         
-        
     }
     
+    // MARK: Creating a done press button for datePicker tool bar & formatting date
     func donePressed(){
         // Date formatter
         let dateFormatter = DateFormatter()

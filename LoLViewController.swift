@@ -19,6 +19,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBAction func addButton(_ sender: UIButton) {
         
         if (imputTextField.text != "") {
+            
             let newList = List(title: imputTextField.text!)
             lists.append(newList)
             selectedListIndex = lists.count
@@ -26,7 +27,9 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
             imputTextField.resignFirstResponder()
             Model.shared.persistListToDefaults()
             imputTextField.text = ""
+            
         } else {
+            
             let alert = UIAlertController(title: "Ops!", message: "Please enter a list name", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
