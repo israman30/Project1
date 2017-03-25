@@ -64,21 +64,25 @@ class Item: NSObject, NSCoding {
     private struct Keys {
         static let title = "title"
         static let description1 = "description1"
+        static let date = "date"
     }
     
     var title: String
     var description1 = "description1"
+    var date: String 
     
-    init(title: String, description1: String) {
+    init(title: String, description1: String, date: String) {
         
         self.title = title
         self.description1 = description1
+        self.date = date
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         self.init(
             title: aDecoder.decodeObject(forKey: Keys.title) as! String,
-            description1: aDecoder.decodeObject(forKey: Keys.description1) as! String
+            description1: aDecoder.decodeObject(forKey: Keys.description1) as! String,
+            date: aDecoder.decodeObject(forKey: Keys.date) as! String
             )
     }
     
@@ -86,6 +90,7 @@ class Item: NSObject, NSCoding {
         
         aCoder.encode(title, forKey: Keys.title)
         aCoder.encode(description1, forKey: Keys.description1)
+        aCoder.encode(date, forKey: Keys.date)
     }
     
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -183,15 +184,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-LO-sYN">
+                                                    <rect key="frame" x="8" y="63" width="327" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="TFY-zN-SkL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="T96-2d-uIa" firstAttribute="top" secondItem="IZW-zH-8eN" secondAttribute="top" constant="29" id="Gze-C4-iPS"/>
                                                 <constraint firstAttribute="trailing" secondItem="T96-2d-uIa" secondAttribute="trailing" constant="8" id="Sh2-da-Ow8"/>
                                                 <constraint firstAttribute="bottom" secondItem="T96-2d-uIa" secondAttribute="bottom" constant="28" id="dsq-xc-Z9B"/>
                                                 <constraint firstItem="T96-2d-uIa" firstAttribute="leading" secondItem="IZW-zH-8eN" secondAttribute="leading" constant="8" id="eaO-fR-h63"/>
+                                                <constraint firstItem="OeS-LO-sYN" firstAttribute="trailing" secondItem="IZW-zH-8eN" secondAttribute="trailingMargin" id="fBn-5s-DZg"/>
+                                                <constraint firstItem="OeS-LO-sYN" firstAttribute="bottom" secondItem="IZW-zH-8eN" secondAttribute="bottomMargin" id="hav-KO-2XV"/>
+                                                <constraint firstItem="OeS-LO-sYN" firstAttribute="leading" secondItem="IZW-zH-8eN" secondAttribute="leadingMargin" id="lN7-Ez-xYP"/>
+                                                <constraint firstItem="OeS-LO-sYN" firstAttribute="top" secondItem="T96-2d-uIa" secondAttribute="bottom" constant="-1" id="r2R-Rm-ail"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateTxtField" destination="OeS-LO-sYN" id="XqL-N5-vvF"/>
                                             <outlet property="nameLabel" destination="T96-2d-uIa" id="lHL-ud-thg"/>
                                             <segue destination="fqG-YG-q5k" kind="show" identifier="segueToDVC" id="hYO-CK-w1L"/>
                                         </connections>
@@ -291,25 +306,36 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Set date here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3j-Jk-2HV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Set Date Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3j-Jk-2HV">
                                 <rect key="frame" x="112" y="100" width="151" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gf4-Iq-lyD"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="T3j-Jk-2HV" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leadingMargin" constant="96" id="5vV-x4-lbG"/>
                             <constraint firstItem="cGd-0N-cBt" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="62" id="6tf-fe-uut"/>
                             <constraint firstItem="xt1-0q-NAh" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="16" id="8fs-Xb-3bg"/>
                             <constraint firstItem="cGd-0N-cBt" firstAttribute="top" secondItem="xt1-0q-NAh" secondAttribute="bottom" constant="123" id="DmA-ei-na9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T3j-Jk-2HV" secondAttribute="trailing" constant="96" id="IRS-b1-Nt3"/>
                             <constraint firstAttribute="trailing" secondItem="V2r-9D-BFA" secondAttribute="trailing" constant="30" id="J6H-tc-hji"/>
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="top" secondItem="QmS-No-4sc" secondAttribute="bottom" id="Pta-5n-XJ9"/>
                             <constraint firstAttribute="trailing" secondItem="cGd-0N-cBt" secondAttribute="trailing" constant="62" id="Q8r-zC-PCH"/>
                             <constraint firstItem="xt1-0q-NAh" firstAttribute="top" secondItem="V2r-9D-BFA" secondAttribute="bottom" constant="32" id="TTQ-qV-l3c"/>
                             <constraint firstAttribute="trailing" secondItem="xt1-0q-NAh" secondAttribute="trailing" constant="16" id="WPo-Zh-so9"/>
                             <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="cGd-0N-cBt" secondAttribute="bottom" constant="56" id="bUo-lY-75h"/>
+                            <constraint firstItem="T3j-Jk-2HV" firstAttribute="top" secondItem="V2r-9D-BFA" secondAttribute="bottom" constant="-6" id="dM8-pD-aRx"/>
+                            <constraint firstItem="xt1-0q-NAh" firstAttribute="top" secondItem="T3j-Jk-2HV" secondAttribute="bottom" constant="8" id="kdl-nB-wGT"/>
                             <constraint firstItem="EPw-uH-6dj" firstAttribute="top" secondItem="xt1-0q-NAh" secondAttribute="bottom" constant="221" id="muR-k1-dN4"/>
                             <constraint firstItem="V2r-9D-BFA" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="30" id="nef-EZ-qLF"/>
                         </constraints>

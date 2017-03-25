@@ -25,23 +25,26 @@ class DescriptionViewController: UIViewController {
         
         descriptionLabel.text = selectedTask.title
         descriptionTextField.text = selectedTask.description1
+        dateTxtField.text = selectedTask.date
         // This block give the radius corner of the UI Text View
         descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 10
+        
     
         createDatePicker()
         
     }
+    
 
     
     // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
-        saveDate()
-        if descriptionTextField.text != "" {
+       
+        if descriptionTextField.text != "" && dateTxtField.text != ""{
             selectedTask.description1 = descriptionTextField.text
-            
+            selectedTask.date = dateTxtField.text!
             Model.shared.persistListToDefaults()
             
             savingDescription()
@@ -55,10 +58,7 @@ class DescriptionViewController: UIViewController {
         }
     }
     
-    func saveDate(){
-        UserDefaults.standard.setValue(dateTxtField.text, forKey: "date")
-        
-    }
+    
     
     // MARk: Saving task description function
     func savingDescription(){
