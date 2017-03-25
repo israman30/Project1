@@ -64,13 +64,13 @@ class DescriptionViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    // MARK: Creating a date picker
     func createDatePicker(){
     
         // Format for picker
         datePicker.datePickerMode = .dateAndTime
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.backgroundColor = .black
-        
         
         // Tool bar for date picker
         let toolBar = UIToolbar()
@@ -80,7 +80,6 @@ class DescriptionViewController: UIViewController {
         // Tool button for date picker
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolBar.setItems([doneButton], animated: false)
-        
         doneButton.tintColor = UIColor.white
         
         dateTxtField.inputAccessoryView = toolBar
@@ -88,11 +87,12 @@ class DescriptionViewController: UIViewController {
     }
     
     func donePressed(){
-        
+        // Date formatter
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
-    
+        
+        // Dismissing picker after selected
         dateTxtField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
