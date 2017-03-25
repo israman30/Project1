@@ -38,7 +38,8 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       tableViewOutlet.layer.cornerRadius = 10
+        tableViewOutlet.layer.cornerRadius = 10
+        tableViewOutlet.reloadData()
     }
     
     
@@ -59,7 +60,6 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         cell.nameLabel.text = selectedList.items[indexPath.row].title
         
         cell.dateTxtField.text = selectedList.items[indexPath.row].date
-        
         
         return cell
     }
