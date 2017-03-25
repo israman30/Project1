@@ -13,6 +13,7 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var descriptionTextField: UITextView!
+    
     @IBOutlet weak var dateTxtField: UITextField!
     
     let datePicker = UIDatePicker()
@@ -29,6 +30,8 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 10
+        
+        createDatePicker()
     }
 
     
@@ -63,23 +66,38 @@ class DescriptionViewController: UIViewController {
     
     func createDatePicker(){
     
+        // Format for picker
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        datePicker.backgroundColor = .black
+        
+        
+        // Tool bar for date picker
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
+        toolBar.barTintColor = UIColor.black
         
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        // Tool button for date picker
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolBar.setItems([doneButton], animated: false)
+        
+        doneButton.tintColor = UIColor.white
+        
         dateTxtField.inputAccessoryView = toolBar
-        
         dateTxtField.inputView = datePicker
-        
-        
     }
     
-    func doneButton(){
+    func donePressed(){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
     
-        dateTxtField.text = "\(datePicker.date)"
+        dateTxtField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
+    
+    
     /*
     func createDatePicker() {
         
