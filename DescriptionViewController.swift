@@ -16,7 +16,7 @@ class DescriptionViewController: UIViewController {
     
     @IBOutlet weak var dateTxtField: UITextField!
     
-    let datePicker = UIDatePicker()
+    var datePicker = UIDatePicker()
    
     var selectedTask: Item! // This line save all the data from the List of Items Table View
     
@@ -30,26 +30,34 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 10
-        
+    
         createDatePicker()
+        
     }
 
     
     // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
-        
+        saveDate()
         if descriptionTextField.text != "" {
             selectedTask.description1 = descriptionTextField.text
+            
             Model.shared.persistListToDefaults()
             
             savingDescription()
-
+            
+            
         } else {
             let alert = UIAlertController(title: "Hey!", message: "Enter a description please", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             print("Save a description please..!")
         }
+    }
+    
+    func saveDate(){
+        UserDefaults.standard.setValue(dateTxtField.text, forKey: "date")
+        
     }
     
     // MARk: Saving task description function
@@ -84,6 +92,8 @@ class DescriptionViewController: UIViewController {
         
         dateTxtField.inputAccessoryView = toolBar
         dateTxtField.inputView = datePicker
+        
+        
     }
     
     func donePressed(){
@@ -95,27 +105,7 @@ class DescriptionViewController: UIViewController {
         // Dismissing picker after selected
         dateTxtField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
+        
     }
     
-    
-    /*
-    func createDatePicker() {
-        
-        datePicker.datePickerMode = .dateAndTime
-        
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([doneButton], animated: false)
-        
-        deadline.inputAccessoryView = toolbar
-        deadline.inputView = datePicker
-    }
-    
-    func donePressed() {
-        deadline.text = "\(datePicker.date.prettyLocaleFormattedWithTime)"
-        self.view.endEditing(true)
-    }
-   */
 }
