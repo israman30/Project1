@@ -17,6 +17,8 @@
 		8D6042661DDB6C0C007BF405 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6042651DDB6C0C007BF405 /* Data.swift */; };
 		8D6042711DDBAACB007BF405 /* LoLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6042701DDBAACB007BF405 /* LoLViewController.swift */; };
 		8D6042731DDBAF50007BF405 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6042721DDBAF50007BF405 /* FirstTableViewCell.swift */; };
+		8D6E984C1E8C285700B4A3B7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */; };
+		8D6E984D1E8C285700B4A3B7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		8D6042651DDB6C0C007BF405 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8D6042701DDBAACB007BF405 /* LoLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoLViewController.swift; path = ../LoLViewController.swift; sourceTree = "<group>"; };
 		8D6042721DDBAF50007BF405 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTableViewCell.swift; path = ../FirstTableViewCell.swift; sourceTree = "<group>"; };
+		8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6E984C1E8C285700B4A3B7 /* UserNotifications.framework in Frameworks */,
+				8D6E984D1E8C285700B4A3B7 /* UserNotificationsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 			children = (
 				8D6042491DDB5633007BF405 /* porjectOneFirstApp */,
 				8D6042481DDB5633007BF405 /* Products */,
+				8D6E98491E8C285600B4A3B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +124,15 @@
 				8D6042651DDB6C0C007BF405 /* Data.swift */,
 			);
 			name = SwiftFiles;
+			sourceTree = "<group>";
+		};
+		8D6E98491E8C285600B4A3B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */,
+				8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

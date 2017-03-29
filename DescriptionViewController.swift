@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class DescriptionViewController: UIViewController {
 
@@ -34,19 +35,21 @@ class DescriptionViewController: UIViewController {
         
         createDatePicker()
         
+        
     }
     
     
     // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
-       
         if descriptionTextField.text != "" || dateTxtField.text != "" {
             
             selectedTask.description1 = descriptionTextField.text
             selectedTask.date = dateTxtField.text!
             Model.shared.persistListToDefaults()
             
+            notificationSender(datePicker)
             savingDescription()
+            
             
         } else {
             
@@ -103,7 +106,15 @@ class DescriptionViewController: UIViewController {
         // Dismissing picker after selected
         dateTxtField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
-        
+    }
+    
+    func notificationSender(_ sender: UIDatePicker){
+//        let sender = UIDatePicker()
+        let selectedDate = sender.date
+        print("Selected Date is : \(selectedDate)")
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        delegate?.scheduleNotification(at: selectedDate)
+
     }
     
 }
