@@ -106,8 +106,8 @@ class DescriptionViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    // MARK: Calling user cnotifications
     func notificationSender(_ sender: UIDatePicker){
-//        let sender = UIDatePicker()
         let selectedDate = sender.date
         print("Selected Date is : \(selectedDate)")
         let delegate = UIApplication.shared.delegate as? AppDelegate
