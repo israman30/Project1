@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().add(request) {(error) in
             if let error = error {
-                print("Uh oh! We had an error: \(error)")
+                print("We had an error: \(error)")
             }
         }
     }
