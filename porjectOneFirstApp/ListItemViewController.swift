@@ -16,8 +16,9 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     var selectedList: List! // This line contain the value of List of list
     
-    var cellID = "secondCell"
+    var cellID = "secondCell" // Cell ID
     
+    // MARK: Button saves the Task list
     @IBAction func tapButton(_ sender: UIButton) {
         
         if inputTextOutlet.text != "" {
@@ -45,6 +46,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     }
     
+    // MARK: ViewDidload reload the table view after the description data is saved on Description VC
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         tableViewOutlet.reloadData()
@@ -57,7 +59,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    // MARK: Data source and Delegates
+    // MARK: Data Source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedList.items.count
     }

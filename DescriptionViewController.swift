@@ -74,7 +74,7 @@ class DescriptionViewController: UIViewController {
     // MARK: Creating a date picker
     func createDatePicker(){
     
-        // Format for picker
+        // Custom the picker
         datePicker.datePickerMode = .dateAndTime
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.backgroundColor = .black
@@ -106,13 +106,12 @@ class DescriptionViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    // MARK: Calling user cnotifications
-    func notificationSender(_ sender: UIDatePicker){
+    // MARK: Calling User Notifications
+    func notificationSender(_ sender: UIDatePicker) {
         let selectedDate = sender.date
         print("Selected Date is : \(selectedDate)")
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.scheduleNotification(at: selectedDate)
-
     }
     
 }

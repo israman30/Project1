@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 class Model {
+    
 static let shared = Model()
+    
     private init(){}
+    
     let key = "Persisted-List)"
     
     func persistListToDefaults() {

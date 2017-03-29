@@ -14,8 +14,9 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var imputTextField: UITextField!
     
-    var myItem = "firstCell"
+    var myItem = "firstCell" // Cell ID
     
+    // MARK: Button saves List
     @IBAction func addButton(_ sender: UIButton) {
         
         if (imputTextField.text != "") {
@@ -57,6 +58,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
    
     }
     
+    // MARK: ViewWillAppear will update and custom the Navigation Controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
