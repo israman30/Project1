@@ -35,7 +35,6 @@ class DescriptionViewController: UIViewController {
         
         createDatePicker()
         
-        
     }
     
     
@@ -49,7 +48,6 @@ class DescriptionViewController: UIViewController {
             
             notificationSender(datePicker)
             savingDescription()
-            
             
         } else {
             
