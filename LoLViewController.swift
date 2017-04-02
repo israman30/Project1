@@ -54,15 +54,18 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewOutlet.layer.cornerRadius = 10
-   
+        self.tableViewOutlet.layer.cornerRadius = 10
+        self.tableViewOutlet.layer.shadowOpacity = 0.7
+        self.tableViewOutlet.layer.shadowRadius = 5
+        self.tableViewOutlet.layer.shadowOffset = CGSize(width: 10.0, height: 5.0)
+        
     }
     
     // MARK: ViewWillAppear will update and custom the Navigation Controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
-
+        
     }
     
     
