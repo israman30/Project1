@@ -61,8 +61,7 @@
 				8D60424E1DDB5633007BF405 /* Main.storyboard */,
 				8D6042511DDB5633007BF405 /* Assets.xcassets */,
 				8D6042531DDB5633007BF405 /* LaunchScreen.storyboard */,
-				8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */,
-				8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */,
+				8D7DF54D1E908C45004F1D49 /* TextFieldEdit */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -139,6 +138,15 @@
 				8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D7DF54D1E908C45004F1D49 /* TextFieldEdit */ = {
+			isa = PBXGroup;
+			children = (
+				8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */,
+				8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */,
+			);
+			name = TextFieldEdit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
