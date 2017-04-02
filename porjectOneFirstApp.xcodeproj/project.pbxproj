@@ -19,6 +19,8 @@
 		8D6042731DDBAF50007BF405 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6042721DDBAF50007BF405 /* FirstTableViewCell.swift */; };
 		8D6E984C1E8C285700B4A3B7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */; };
 		8D6E984D1E8C285700B4A3B7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */; };
+		8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */; };
+		8D7DF54C1E908644004F1D49 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		8D6042721DDBAF50007BF405 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTableViewCell.swift; path = ../FirstTableViewCell.swift; sourceTree = "<group>"; };
 		8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTxtField.swift; sourceTree = "<group>"; };
+		8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				8D60424E1DDB5633007BF405 /* Main.storyboard */,
 				8D6042511DDB5633007BF405 /* Assets.xcassets */,
 				8D6042531DDB5633007BF405 /* LaunchScreen.storyboard */,
+				8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */,
+				8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -210,11 +216,13 @@
 			files = (
 				8D6042711DDBAACB007BF405 /* LoLViewController.swift in Sources */,
 				8D12994A1DDCCF6700AB1F07 /* DescriptionViewController.swift in Sources */,
+				8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */,
 				8D6042661DDB6C0C007BF405 /* Data.swift in Sources */,
 				8D6042731DDBAF50007BF405 /* FirstTableViewCell.swift in Sources */,
 				8D1299461DDCAE6100AB1F07 /* ListItemViewController.swift in Sources */,
 				8D60424B1DDB5633007BF405 /* AppDelegate.swift in Sources */,
 				8D1299481DDCB06100AB1F07 /* SecondTableViewCell.swift in Sources */,
+				8D7DF54C1E908644004F1D49 /* TextFieldEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
