@@ -55,10 +55,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableViewOutlet.layer.cornerRadius = 10
-        self.tableViewOutlet.layer.shadowOpacity = 0.7
-        self.tableViewOutlet.layer.shadowRadius = 5
-        self.tableViewOutlet.layer.shadowOffset = CGSize(width: 10.0, height: 5.0)
-        
     }
     
     // MARK: ViewWillAppear will update and custom the Navigation Controller
