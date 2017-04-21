@@ -84,7 +84,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
             lists.remove(at: indexPath.row)
             let defaults = UserDefaults.standard
             defaults.removeObject(forKey: "title")
-            defaults.removeObject(forKey: "items")
+            
             defaults.synchronize()
             tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
             
