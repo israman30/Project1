@@ -86,8 +86,19 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             selectedList.items.remove(at: indexPath.row)
+            let userDefaults = UserDefaults.standard
             tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
-        } 
+            
+            userDefaults.removeObject(forKey: "description1")
+            userDefaults.removeObject(forKey: "title")
+            userDefaults.removeObject(forKey: "date")
+            
+            userDefaults.synchronize()
+            Model.shared.persistListToDefaults()
+            
+        } else {
+            tableViewOutlet.reloadData()
+        }
     }
 }
 
