@@ -80,9 +80,16 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     // This function delete a row from the table view 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+        if editingStyle == .delete {
             lists.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+            let defaults = UserDefaults.standard
+            defaults.removeObject(forKey: "title")
+            defaults.removeObject(forKey: "items")
+            defaults.synchronize()
+            tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+            
+        } else {
+            tableViewOutlet.reloadData()
         }
     }
 }

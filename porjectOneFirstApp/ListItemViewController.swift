@@ -84,9 +84,15 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: This function will delete a row used on the table view
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+        if editingStyle == .delete {
             selectedList.items.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
-        }
+            tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+        } 
     }
 }
+
+
+
+
+
+
