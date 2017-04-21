@@ -83,10 +83,10 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         if editingStyle == .delete {
             lists.remove(at: indexPath.row)
             let defaults = UserDefaults.standard
-            defaults.removeObject(forKey: "title")
-            
-            defaults.synchronize()
             tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+            defaults.removeObject(forKey: "title")
+            defaults.synchronize()
+            Model.shared.persistListToDefaults()
             
         } else {
             tableViewOutlet.reloadData()
