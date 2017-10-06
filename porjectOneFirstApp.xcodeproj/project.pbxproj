@@ -20,6 +20,9 @@
 		8D62813C1F870CAB0009794A /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62813B1F870CAB0009794A /* YokoTextField.swift */; };
 		8D62813E1F870ECD0009794A /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62813D1F870ECD0009794A /* AkiraTextField.swift */; };
 		8D6281401F8710160009794A /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62813F1F8710160009794A /* KaedeTextField.swift */; };
+		8D6281421F8711890009794A /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6281411F8711890009794A /* HoshiTextField.swift */; };
+		8D6281441F8711EC0009794A /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6281431F8711EC0009794A /* IsaoTextField.swift */; };
+		8D6281461F87123E0009794A /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6281451F87123D0009794A /* MinoruTextField.swift */; };
 		8D6E984C1E8C285700B4A3B7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */; };
 		8D6E984D1E8C285700B4A3B7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */; };
 		8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */; };
@@ -42,6 +45,9 @@
 		8D62813B1F870CAB0009794A /* YokoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
 		8D62813D1F870ECD0009794A /* AkiraTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 		8D62813F1F8710160009794A /* KaedeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		8D6281411F8711890009794A /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		8D6281431F8711EC0009794A /* IsaoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		8D6281451F87123D0009794A /* MinoruTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
 		8D6E984A1E8C285700B4A3B7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTxtField.swift; sourceTree = "<group>"; };
@@ -149,7 +155,10 @@
 		8D7DF54D1E908C45004F1D49 /* TextFieldEdit */ = {
 			isa = PBXGroup;
 			children = (
+				8D6281451F87123D0009794A /* MinoruTextField.swift */,
+				8D6281411F8711890009794A /* HoshiTextField.swift */,
 				8D62813F1F8710160009794A /* KaedeTextField.swift */,
+				8D6281431F8711EC0009794A /* IsaoTextField.swift */,
 				8D62813B1F870CAB0009794A /* YokoTextField.swift */,
 				8D62813D1F870ECD0009794A /* AkiraTextField.swift */,
 				8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */,
@@ -233,6 +242,7 @@
 			files = (
 				8D6042711DDBAACB007BF405 /* LoLViewController.swift in Sources */,
 				8D62813C1F870CAB0009794A /* YokoTextField.swift in Sources */,
+				8D6281461F87123E0009794A /* MinoruTextField.swift in Sources */,
 				8D12994A1DDCCF6700AB1F07 /* DescriptionViewController.swift in Sources */,
 				8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */,
 				8D6042661DDB6C0C007BF405 /* Data.swift in Sources */,
@@ -242,6 +252,8 @@
 				8D60424B1DDB5633007BF405 /* AppDelegate.swift in Sources */,
 				8D1299481DDCB06100AB1F07 /* SecondTableViewCell.swift in Sources */,
 				8D7DF54C1E908644004F1D49 /* TextFieldEffects.swift in Sources */,
+				8D6281441F8711EC0009794A /* IsaoTextField.swift in Sources */,
+				8D6281421F8711890009794A /* HoshiTextField.swift in Sources */,
 				8D62813E1F870ECD0009794A /* AkiraTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
