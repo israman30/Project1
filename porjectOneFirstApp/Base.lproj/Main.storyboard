@@ -59,8 +59,7 @@
                                 <rect key="frame" x="16" y="165" width="343" height="482"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="ncc-tR-stf"/>
-                                    <constraint firstAttribute="height" constant="482" id="nhP-9a-FsQ"/>
+                                    <constraint firstAttribute="height" constant="482" id="hHQ-JJ-2K1"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -163,12 +162,13 @@
                             <constraint firstItem="JBh-ZJ-OBO" firstAttribute="top" secondItem="aoc-Oi-sRo" secondAttribute="bottom" constant="-4" id="IyQ-qB-LnB"/>
                             <constraint firstAttribute="trailing" secondItem="6Zu-6p-LwJ" secondAttribute="trailing" constant="16" id="KpL-lo-Vlu"/>
                             <constraint firstAttribute="trailing" secondItem="XVl-4H-cXX" secondAttribute="trailing" constant="16" id="WEd-BP-5OH"/>
+                            <constraint firstItem="XVl-4H-cXX" firstAttribute="top" secondItem="6Zu-6p-LwJ" secondAttribute="bottom" constant="8" id="cVc-Dh-9sq"/>
                             <constraint firstItem="6Zu-6p-LwJ" firstAttribute="top" secondItem="54Y-Cz-lxC" secondAttribute="bottom" constant="39" id="erE-fN-246"/>
+                            <constraint firstItem="XVl-4H-cXX" firstAttribute="centerX" secondItem="6sR-9g-NN6" secondAttribute="centerX" id="fhU-Ao-im0"/>
                             <constraint firstItem="XVl-4H-cXX" firstAttribute="leading" secondItem="6sR-9g-NN6" secondAttribute="leading" constant="16" id="kd1-L2-rMk"/>
                             <constraint firstItem="JBh-ZJ-OBO" firstAttribute="leading" secondItem="6sR-9g-NN6" secondAttribute="leading" constant="16" id="qdL-Xy-P7l"/>
                             <constraint firstItem="wf6-cD-BCE" firstAttribute="top" secondItem="54Y-Cz-lxC" secondAttribute="bottom" constant="8" id="u0s-zs-8sT"/>
                             <constraint firstItem="JBh-ZJ-OBO" firstAttribute="top" secondItem="wf6-cD-BCE" secondAttribute="bottom" constant="-4" id="uTA-FF-0Ud"/>
-                            <constraint firstItem="24y-MB-YRL" firstAttribute="top" secondItem="XVl-4H-cXX" secondAttribute="bottom" constant="20" id="wZ7-PJ-7ZX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wf6-cD-BCE" secondAttribute="trailing" constant="45" id="wuB-ai-O0I"/>
                             <constraint firstItem="aoc-Oi-sRo" firstAttribute="top" secondItem="54Y-Cz-lxC" secondAttribute="bottom" constant="8" id="wyy-DW-xvR"/>
                         </constraints>
