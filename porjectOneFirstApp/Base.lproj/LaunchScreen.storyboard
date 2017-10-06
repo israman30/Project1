@@ -27,19 +27,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallSW" translatesAutoresizingMaskIntoConstraints="NO" id="Oq9-7h-Wi5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.24705882352941178" green="0.27450980392156865" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="todolist" translatesAutoresizingMaskIntoConstraints="NO" id="z3s-Tc-OXy">
-                                <rect key="frame" x="51" y="96" width="240" height="46"/>
+                                <rect key="frame" x="56" y="159" width="240" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="GAP-9z-elj"/>
                                     <constraint firstAttribute="height" constant="46" id="fkG-PH-ucv"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Chalkboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDS-8Y-R1Q">
-                                <rect key="frame" x="103" y="103" width="210" height="39"/>
+                                <rect key="frame" x="108" y="166" width="210" height="39"/>
                                 <color key="backgroundColor" red="0.24873152375221252" green="0.27574366331100464" blue="0.31307166814804077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="K1f-b0-Zbl"/>
@@ -48,19 +44,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akF-pY-6xT">
+                                <rect key="frame" x="140" y="472" width="94" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gHx-ZY-IJa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.24705882352941178" green="0.27450980392156865" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BDS-8Y-R1Q" firstAttribute="leading" secondItem="z3s-Tc-OXy" secondAttribute="trailing" constant="-188" id="158-E6-KhS"/>
-                            <constraint firstItem="Oq9-7h-Wi5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ARW-AI-vGY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BDS-8Y-R1Q" secondAttribute="trailing" constant="46.5" id="DKX-pt-oib"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="BDS-8Y-R1Q" secondAttribute="bottom" constant="525" id="LR1-lS-6M9"/>
-                            <constraint firstAttribute="trailing" secondItem="Oq9-7h-Wi5" secondAttribute="trailing" id="QaW-Cl-fPc"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Oq9-7h-Wi5" secondAttribute="bottom" id="ZYe-YR-51F"/>
-                            <constraint firstItem="z3s-Tc-OXy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-16.5" id="hpN-tF-aLp"/>
-                            <constraint firstItem="Oq9-7h-Wi5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="mDz-i4-XJa"/>
-                            <constraint firstItem="BDS-8Y-R1Q" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="83" id="qOm-AZ-sOO"/>
-                            <constraint firstItem="z3s-Tc-OXy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-214.5" id="vf6-gm-jsC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BDS-8Y-R1Q" secondAttribute="trailing" constant="41" id="DKX-pt-oib"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="BDS-8Y-R1Q" secondAttribute="bottom" constant="462" id="LR1-lS-6M9"/>
+                            <constraint firstItem="akF-pY-6xT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Vaw-u5-G93"/>
+                            <constraint firstItem="z3s-Tc-OXy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-11.5" id="hpN-tF-aLp"/>
+                            <constraint firstItem="BDS-8Y-R1Q" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="146" id="qOm-AZ-sOO"/>
+                            <constraint firstItem="akF-pY-6xT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="149" id="rAT-NY-uNm"/>
+                            <constraint firstItem="z3s-Tc-OXy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-151.5" id="vf6-gm-jsC"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -71,6 +74,5 @@
     </scenes>
     <resources>
         <image name="todolist" width="522" height="124"/>
-        <image name="wallSW" width="750" height="1334"/>
     </resources>
 </document>
