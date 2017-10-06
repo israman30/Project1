@@ -61,22 +61,18 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
-        
     }
-    
     
     // MARK: Keyboard dismiss when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-    
     // MARK: This function prepares the data to go to the display controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listItemViewController = segue.destination as! ListItemViewController
         listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]
     }
-    
     
     // This function delete a row from the table view 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

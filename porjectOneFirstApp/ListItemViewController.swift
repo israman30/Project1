@@ -52,12 +52,10 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         tableViewOutlet.reloadData()
     }
     
-    
     // MARK: Keyboard dismiss when touch outside 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     
     // MARK: Data Source and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,13 +72,11 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    
     //MARK: This function will be take the values and segue to the next veiw controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let descriptionViewController = segue.destination as! DescriptionViewController
         descriptionViewController.selectedTask = selectedList.items[(tableViewOutlet.indexPathForSelectedRow?.row)!]
     }
-    
     
     // MARK: This function will delete a row used on the table view
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
