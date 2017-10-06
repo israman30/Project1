@@ -42,7 +42,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Rounding table view corners
-        tableViewOutlet.layer.cornerRadius = 5
+        tableViewOutlet.layer.cornerRadius = 6
     
     }
     
