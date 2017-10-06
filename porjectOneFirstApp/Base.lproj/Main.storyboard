@@ -334,10 +334,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backG3-1" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-VW-byY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="xt1-0q-NAh">
                                 <rect key="frame" x="16" y="138" width="343" height="308"/>
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -383,7 +379,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.24705882352941178" green="0.27450980392156865" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="T3j-Jk-2HV" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leadingMargin" constant="96" id="5vV-x4-lbG"/>
                             <constraint firstItem="cGd-0N-cBt" firstAttribute="leading" secondItem="pG6-5p-9h1" secondAttribute="leading" constant="62" id="6tf-fe-uut"/>
@@ -422,7 +418,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backG3-1" width="236" height="354"/>
         <image name="buttonWht" width="768" height="768"/>
         <image name="dot-1" width="500" height="500"/>
         <image name="todolist" width="522" height="124"/>
