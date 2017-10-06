@@ -31,7 +31,7 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
-        descriptionTextField.layer.cornerRadius = 10
+        descriptionTextField.layer.cornerRadius = 5
         
         createDatePicker()
         

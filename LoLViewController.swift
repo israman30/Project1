@@ -54,7 +54,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableViewOutlet.layer.cornerRadius = 10
+        self.tableViewOutlet.layer.cornerRadius = 5
     }
     
     // MARK: ViewWillAppear will update and custom the Navigation Controller
