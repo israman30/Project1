@@ -127,13 +127,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here your List" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JBh-ZJ-OBO" customClass="AkiraTextField" customModule="porjectOneFirstApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="115" width="283" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your List" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JBh-ZJ-OBO" customClass="KaedeTextField" customModule="porjectOneFirstApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="113" width="283" height="35"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7ac-Y0-oRu"/>
+                                    <constraint firstAttribute="height" constant="35" id="7ac-Y0-oRu"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="0.90550085619999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes"/>
                                 <userDefinedRuntimeAttributes>
@@ -155,6 +155,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
@@ -164,14 +167,14 @@
                             <constraint firstItem="6Zu-6p-LwJ" firstAttribute="leading" secondItem="JBh-ZJ-OBO" secondAttribute="trailing" constant="8" id="64Z-dH-zOh"/>
                             <constraint firstItem="wf6-cD-BCE" firstAttribute="leading" secondItem="6sR-9g-NN6" secondAttribute="leadingMargin" constant="88" id="7SM-dG-t46"/>
                             <constraint firstAttribute="trailing" secondItem="aoc-Oi-sRo" secondAttribute="trailing" constant="76" id="Hn8-lv-FGa"/>
-                            <constraint firstItem="JBh-ZJ-OBO" firstAttribute="top" secondItem="aoc-Oi-sRo" secondAttribute="bottom" constant="8" id="IyQ-qB-LnB"/>
+                            <constraint firstItem="JBh-ZJ-OBO" firstAttribute="top" secondItem="aoc-Oi-sRo" secondAttribute="bottom" constant="6" id="IyQ-qB-LnB"/>
                             <constraint firstAttribute="trailing" secondItem="6Zu-6p-LwJ" secondAttribute="trailing" constant="16" id="KpL-lo-Vlu"/>
                             <constraint firstAttribute="trailing" secondItem="XVl-4H-cXX" secondAttribute="trailing" constant="16" id="WEd-BP-5OH"/>
                             <constraint firstItem="6Zu-6p-LwJ" firstAttribute="top" secondItem="54Y-Cz-lxC" secondAttribute="bottom" constant="39" id="erE-fN-246"/>
                             <constraint firstItem="XVl-4H-cXX" firstAttribute="leading" secondItem="6sR-9g-NN6" secondAttribute="leading" constant="16" id="kd1-L2-rMk"/>
                             <constraint firstItem="JBh-ZJ-OBO" firstAttribute="leading" secondItem="6sR-9g-NN6" secondAttribute="leading" constant="16" id="qdL-Xy-P7l"/>
                             <constraint firstItem="wf6-cD-BCE" firstAttribute="top" secondItem="54Y-Cz-lxC" secondAttribute="bottom" constant="8" id="u0s-zs-8sT"/>
-                            <constraint firstItem="JBh-ZJ-OBO" firstAttribute="top" secondItem="wf6-cD-BCE" secondAttribute="bottom" constant="8" id="uTA-FF-0Ud"/>
+                            <constraint firstItem="JBh-ZJ-OBO" firstAttribute="top" secondItem="wf6-cD-BCE" secondAttribute="bottom" constant="6" id="uTA-FF-0Ud"/>
                             <constraint firstItem="24y-MB-YRL" firstAttribute="top" secondItem="XVl-4H-cXX" secondAttribute="bottom" constant="20" id="wZ7-PJ-7ZX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wf6-cD-BCE" secondAttribute="trailing" constant="45" id="wuB-ai-O0I"/>
                             <constraint firstItem="aoc-Oi-sRo" firstAttribute="top" secondItem="54Y-Cz-lxC" secondAttribute="bottom" constant="8" id="wyy-DW-xvR"/>
