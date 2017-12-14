@@ -28,13 +28,17 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.text = selectedTask.description1
         dateTxtField.text = selectedTask.date
         // This block give the radius corner of the UI Text View
+        
+        createDatePicker()
+        updateDetailTextView()
+        
+    }
+    
+    func updateDetailTextView(){
         descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
         descriptionTextField.clipsToBounds = true
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.layer.cornerRadius = 6
-        
-        createDatePicker()
-        
     }
     
     // MARK: Saving function - data entered in the text view
@@ -46,6 +50,7 @@ class DescriptionViewController: UIViewController {
         if descriptionDetail != "" || dateDetail != "" {
             selectedTask.description1 = descriptionDetail
             selectedTask.date = dateDetail
+            
             Model.shared.persistListToDefaults()
             
             notificationSender(datePicker)
@@ -59,7 +64,6 @@ class DescriptionViewController: UIViewController {
             print("Save a description please..!")
         }
     }
-    
     
     // MARk: Saving task description function
     func savingDescription(){
@@ -93,7 +97,6 @@ class DescriptionViewController: UIViewController {
         
         dateTxtField.inputAccessoryView = toolBar
         dateTxtField.inputView = datePicker
-        
     }
     
     // MARK: Creating a done press button for datePicker tool bar & formatting date
