@@ -27,7 +27,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
             tableViewOutlet.reloadData()
             imputTextField.resignFirstResponder()
             Model.shared.persistListToDefaults()
-            imputTextField.text = ""
+        imputTextField.text = ""
             
         } else {
             
