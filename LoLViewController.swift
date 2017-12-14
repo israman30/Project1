@@ -19,7 +19,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     // MARK: Button saves List
     @IBAction func addButton(_ sender: UIButton) {
         
-        if (imputTextField.text != "") {
+        if imputTextField.text != "" {
             
             let newList = List(title: imputTextField.text!)
             lists.append(newList)

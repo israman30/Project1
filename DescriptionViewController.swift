@@ -37,7 +37,6 @@ class DescriptionViewController: UIViewController {
         
     }
     
-    
     // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
         if descriptionTextField.text != "" || dateTxtField.text != "" {
