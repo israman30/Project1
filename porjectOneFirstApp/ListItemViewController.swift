@@ -64,10 +64,11 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
+        let titleTask = selectedList.items[indexPath.row].title
+        cell.nameLabel.text = titleTask
         
-        cell.nameLabel.text = selectedList.items[indexPath.row].title
-        
-        cell.dateTxtField.text = selectedList.items[indexPath.row].date
+        let dateTask = selectedList.items[indexPath.row].date
+        cell.dateTxtField.text = dateTask
         
         return cell
     }
