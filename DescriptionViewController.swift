@@ -39,10 +39,13 @@ class DescriptionViewController: UIViewController {
     
     // MARK: Saving function - data entered in the text view
     @IBAction func saveDetail(_ sender: UIBarButtonItem) {
-        if descriptionTextField.text != "" || dateTxtField.text != "" {
-            
-            selectedTask.description1 = descriptionTextField.text
-            selectedTask.date = dateTxtField.text!
+        
+        guard let descriptionDetail = descriptionTextField.text else {return}
+        guard let dateDetail = dateTxtField.text else {return}
+        
+        if descriptionDetail != "" || dateDetail != "" {
+            selectedTask.description1 = descriptionDetail
+            selectedTask.date = dateDetail
             Model.shared.persistListToDefaults()
             
             notificationSender(datePicker)

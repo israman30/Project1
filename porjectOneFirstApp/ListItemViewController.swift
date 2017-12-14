@@ -64,6 +64,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SecondTableViewCell
+        
         let titleTask = selectedList.items[indexPath.row].title
         cell.nameLabel.text = titleTask
         
@@ -98,9 +99,5 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 }
-
-
-
-
 
 
