@@ -30,7 +30,6 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
             imputTextField.text = ""
             
         } else {
-            
             let alert = UIAlertController(title: "Ops!", message: "Please enter a list name", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -47,7 +46,8 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let cell = tableView.dequeueReusableCell(withIdentifier: myItem, for: indexPath) as! FirstTableViewCell
         
-        cell.nameLabel.text = lists[indexPath.row].title
+        let titleList = lists[indexPath.row].title
+        cell.nameLabel.text = titleList
         
         return cell
     }
