@@ -20,14 +20,14 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBAction func addButton(_ sender: UIButton) {
         
         if imputTextField.text != "" {
-            
-            let newList = List(title: imputTextField.text!)
+            guard let inputText = imputTextField.text else {return}
+            let newList = List(title: inputText)
             lists.append(newList)
             selectedListIndex = lists.count
             tableViewOutlet.reloadData()
             imputTextField.resignFirstResponder()
             Model.shared.persistListToDefaults()
-        imputTextField.text = ""
+            imputTextField.text = ""
             
         } else {
             
