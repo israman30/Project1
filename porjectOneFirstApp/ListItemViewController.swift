@@ -22,8 +22,8 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func tapButton(_ sender: UIButton) {
         
         if inputTextOutlet.text != "" {
-            
-            let otherItem = Item(title: inputTextOutlet.text!, description1: "", date: "")
+            guard let titleTaskText = inputTextOutlet.text else {return}
+            let otherItem = Item(title: titleTaskText, description1: "", date: "")
             selectedList.items.append(otherItem)
             tableViewOutlet.reloadData()
             inputTextOutlet.resignFirstResponder()

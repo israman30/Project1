@@ -60,7 +60,9 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
     // MARK: ViewWillAppear will update and custom the Navigation Controller
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName: UIFont(name:"Marker Felt", size:20.0)!, NSForegroundColorAttributeName:UIColor.white
+        ]
     }
     
     // MARK: Keyboard dismiss when touch outside
