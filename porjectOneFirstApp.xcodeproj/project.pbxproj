@@ -85,6 +85,15 @@
 			name = VCs;
 			sourceTree = "<group>";
 		};
+		8D236F042066C2660006B58C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D10807E1E6F0BBC00824319 /* UI */,
+				8D10807F1E6F0BDD00824319 /* Outlets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8D60423E1DDB5633007BF405 = {
 			isa = PBXGroup;
 			children = (
@@ -105,30 +114,29 @@
 		8D6042491DDB5633007BF405 /* porjectOneFirstApp */ = {
 			isa = PBXGroup;
 			children = (
-				8D10807E1E6F0BBC00824319 /* UI */,
-				8D60426B1DDB726D007BF405 /* SwiftFiles */,
-				8D60425E1DDB61F4007BF405 /* Logic */,
+				8D60424A1DDB5633007BF405 /* AppDelegate.swift */,
+				8D236F042066C2660006B58C /* View */,
+				8D60426B1DDB726D007BF405 /* Model */,
+				8D60425E1DDB61F4007BF405 /* Controllers */,
 				8D6042561DDB5633007BF405 /* Info.plist */,
 			);
 			path = porjectOneFirstApp;
 			sourceTree = "<group>";
 		};
-		8D60425E1DDB61F4007BF405 /* Logic */ = {
+		8D60425E1DDB61F4007BF405 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D60424A1DDB5633007BF405 /* AppDelegate.swift */,
 				8D1080801E6F0BF100824319 /* VCs */,
-				8D10807F1E6F0BDD00824319 /* Outlets */,
 			);
-			name = Logic;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		8D60426B1DDB726D007BF405 /* SwiftFiles */ = {
+		8D60426B1DDB726D007BF405 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8D6042651DDB6C0C007BF405 /* Data.swift */,
 			);
-			name = SwiftFiles;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		8D6E98491E8C285600B4A3B7 /* Frameworks */ = {
