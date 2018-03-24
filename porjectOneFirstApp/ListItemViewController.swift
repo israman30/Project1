@@ -43,7 +43,6 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         // Rounding table view corners
         tableViewOutlet.layer.cornerRadius = 6
-    
     }
     
     // MARK: ViewDidload reload the table view after the description data is saved on Description VC
@@ -70,6 +69,8 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         
         let dateTask = selectedList.items[indexPath.row].date
         cell.dateTxtField.text = dateTask
+        
+        cell.selectionStyle = .none
         
         return cell
     }

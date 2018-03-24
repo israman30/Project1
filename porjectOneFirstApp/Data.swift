@@ -81,6 +81,7 @@ class Item: NSObject, NSCoding {
         self.date = date
     }
     
+    
     required convenience init?(coder aDecoder: NSCoder) {
         self.init(
             title: aDecoder.decodeObject(forKey: Keys.title) as! String,

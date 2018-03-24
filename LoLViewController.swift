@@ -49,6 +49,8 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let titleList = lists[indexPath.row].title
         cell.nameLabel.text = titleList
         
+        cell.selectionStyle = .none
+        
         return cell
     }
     

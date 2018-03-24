@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after applicution launch.
         Model.shared.loadPersistedListFromDefaults()
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
                 
         let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
+        
         
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
