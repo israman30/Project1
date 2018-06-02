@@ -30,10 +30,7 @@ class LoLViewController: UIViewController {
             imputTextField.text = ""
             
         } else {
-            let alert = UIAlertController(title: "Ops!", message: "Please enter a list name", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            print("The is not list entered")
+            AlertController.createAlert(vc: self, title: "Sorry!", message: "Please enter a list name")
         }
     }
     

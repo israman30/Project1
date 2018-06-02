@@ -57,11 +57,7 @@ class DescriptionViewController: UIViewController {
             savingDescription()
             
         } else {
-            
-            let alert = UIAlertController(title: "Hey!", message: "Enter a description please", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            print("Save a description please..!")
+            AlertController.createAlert(vc: self, title: "Hey!", message: "Enter a description please")
         }
     }
     
