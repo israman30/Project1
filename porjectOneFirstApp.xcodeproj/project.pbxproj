@@ -24,6 +24,7 @@
 		8D6E984D1E8C285700B4A3B7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */; };
 		8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */; };
 		8D7DF54C1E908644004F1D49 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */; };
+		8D82065520C23FB90000CF17 /* DescriptionVC+Helper+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D82065420C23FB90000CF17 /* DescriptionVC+Helper+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		8D6E984B1E8C285700B4A3B7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		8D7DF5491E908604004F1D49 /* YoshikoTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTxtField.swift; sourceTree = "<group>"; };
 		8D7DF54B1E908644004F1D49 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		8D82065420C23FB90000CF17 /* DescriptionVC+Helper+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DescriptionVC+Helper+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */,
+				8D82065420C23FB90000CF17 /* DescriptionVC+Helper+Extension.swift */,
 			);
 			name = DescriptVC;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				8D12994A1DDCCF6700AB1F07 /* DescriptionViewController.swift in Sources */,
 				8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */,
 				8D4EBD5820C237FD00897BA9 /* TableView+Helper+Extensions.swift in Sources */,
+				8D82065520C23FB90000CF17 /* DescriptionVC+Helper+Extension.swift in Sources */,
 				8D4EBD5E20C23B1D00897BA9 /* AlertController.swift in Sources */,
 				8D6042661DDB6C0C007BF405 /* Data.swift in Sources */,
 				8D6042731DDBAF50007BF405 /* FirstTableViewCell.swift in Sources */,

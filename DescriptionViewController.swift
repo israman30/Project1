@@ -28,17 +28,8 @@ class DescriptionViewController: UIViewController {
         descriptionTextField.text = selectedTask.description1
         dateTxtField.text = selectedTask.date
         // This block give the radius corner of the UI Text View
-        
         createDatePicker()
         updateDetailTextView()
-        
-    }
-    
-    func updateDetailTextView(){
-        descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
-        descriptionTextField.clipsToBounds = true
-        descriptionTextField.layer.masksToBounds = true
-        descriptionTextField.layer.cornerRadius = 6
     }
     
     // MARK: Saving function - data entered in the text view
@@ -61,21 +52,15 @@ class DescriptionViewController: UIViewController {
         }
     }
     
-    // MARk: Saving task description function
-    func savingDescription(){
-        let alert = UIAlertController(title: "Yay!", message: "You just saved your Chalkboard detail", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: Keyboard dismiss when touch outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    func updateDetailTextView(){
+        descriptionTextField.layer.cornerRadius = descriptionTextField.frame.standardized.width / 2
+        descriptionTextField.clipsToBounds = true
+        descriptionTextField.layer.masksToBounds = true
+        descriptionTextField.layer.cornerRadius = 6
     }
     
     // MARK: Creating a date picker
     func createDatePicker(){
-    
         // Custom the picker
         datePicker.datePickerMode = .dateAndTime
         datePicker.setValue(UIColor.white, forKey: "textColor")
@@ -95,15 +80,13 @@ class DescriptionViewController: UIViewController {
         dateTxtField.inputView = datePicker
     }
     
-    // MARK: Creating a done press button for datePicker tool bar & formatting date
-    func donePressed(){
-        // Date formatter
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-        
-        // Dismissing picker after selected
-        dateTxtField.text = dateFormatter.string(from: datePicker.date)
+    // MARk: Saving task description function
+    func savingDescription(){
+        AlertController.createAlert(vc: self, title: "Yay!", message: "You just saved your Chalkboard detail")
+    }
+    
+    // MARK: Keyboard dismiss when touch outside
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
@@ -116,3 +99,5 @@ class DescriptionViewController: UIViewController {
     }
     
 }
+
+
