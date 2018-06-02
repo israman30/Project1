@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LoLViewController: UIViewController {
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     
@@ -37,22 +37,7 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    //MARK: Data Source and Delegates
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lists.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: myItem, for: indexPath) as! FirstTableViewCell
-        
-        let titleList = lists[indexPath.row].title
-        cell.nameLabel.text = titleList
-        
-        cell.selectionStyle = .none
-        
-        return cell
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +63,28 @@ class LoLViewController: UIViewController, UITableViewDataSource, UITableViewDel
         listItemViewController.selectedList = lists[(tableViewOutlet.indexPathForSelectedRow?.row)!]
     }
     
-    // This function delete a row from the table view 
+    
+}
+
+extension LoLViewController: UITableViewDataSource, UITableViewDelegate {
+    //MARK: Data Source and Delegates
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lists.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: myItem, for: indexPath) as! FirstTableViewCell
+        
+        let titleList = lists[indexPath.row].title
+        cell.nameLabel.text = titleList
+        
+        cell.selectionStyle = .none
+        
+        return cell
+    }
+    
+    // This function delete a row from the table view
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             lists.remove(at: indexPath.row)
