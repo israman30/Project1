@@ -10,6 +10,7 @@
 		8D1299461DDCAE6100AB1F07 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1299451DDCAE6100AB1F07 /* ListItemViewController.swift */; };
 		8D1299481DDCB06100AB1F07 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1299471DDCB06100AB1F07 /* SecondTableViewCell.swift */; };
 		8D12994A1DDCCF6700AB1F07 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */; };
+		8D4EBD5820C237FD00897BA9 /* TableView+Helper+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4EBD5720C237FD00897BA9 /* TableView+Helper+Extensions.swift */; };
 		8D60424B1DDB5633007BF405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60424A1DDB5633007BF405 /* AppDelegate.swift */; };
 		8D6042501DDB5633007BF405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D60424E1DDB5633007BF405 /* Main.storyboard */; };
 		8D6042521DDB5633007BF405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6042511DDB5633007BF405 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		8D1299451DDCAE6100AB1F07 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
 		8D1299471DDCB06100AB1F07 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTableViewCell.swift; path = ../SecondTableViewCell.swift; sourceTree = "<group>"; };
 		8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionViewController.swift; path = ../DescriptionViewController.swift; sourceTree = "<group>"; };
+		8D4EBD5720C237FD00897BA9 /* TableView+Helper+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Helper+Extensions.swift"; sourceTree = "<group>"; };
 		8D6042471DDB5633007BF405 /* porjectOneFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = porjectOneFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D60424A1DDB5633007BF405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D60424F1DDB5633007BF405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,14 +77,13 @@
 			name = Outlets;
 			sourceTree = "<group>";
 		};
-		8D1080801E6F0BF100824319 /* VCs */ = {
+		8D1080801E6F0BF100824319 /* LoLVC */ = {
 			isa = PBXGroup;
 			children = (
 				8D6042701DDBAACB007BF405 /* LoLViewController.swift */,
-				8D1299451DDCAE6100AB1F07 /* ListItemViewController.swift */,
-				8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */,
+				8D4EBD5720C237FD00897BA9 /* TableView+Helper+Extensions.swift */,
 			);
-			name = VCs;
+			name = LoLVC;
 			sourceTree = "<group>";
 		};
 		8D236F042066C2660006B58C /* View */ = {
@@ -92,6 +93,22 @@
 				8D10807F1E6F0BDD00824319 /* Outlets */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		8D4EBD5920C2398200897BA9 /* ListItemVC */ = {
+			isa = PBXGroup;
+			children = (
+				8D1299451DDCAE6100AB1F07 /* ListItemViewController.swift */,
+			);
+			name = ListItemVC;
+			sourceTree = "<group>";
+		};
+		8D4EBD5A20C2399D00897BA9 /* DescriptVC */ = {
+			isa = PBXGroup;
+			children = (
+				8D1299491DDCCF6700AB1F07 /* DescriptionViewController.swift */,
+			);
+			name = DescriptVC;
 			sourceTree = "<group>";
 		};
 		8D60423E1DDB5633007BF405 = {
@@ -126,7 +143,9 @@
 		8D60425E1DDB61F4007BF405 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D1080801E6F0BF100824319 /* VCs */,
+				8D1080801E6F0BF100824319 /* LoLVC */,
+				8D4EBD5920C2398200897BA9 /* ListItemVC */,
+				8D4EBD5A20C2399D00897BA9 /* DescriptVC */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +252,7 @@
 				8D6042711DDBAACB007BF405 /* LoLViewController.swift in Sources */,
 				8D12994A1DDCCF6700AB1F07 /* DescriptionViewController.swift in Sources */,
 				8D7DF54A1E908604004F1D49 /* YoshikoTxtField.swift in Sources */,
+				8D4EBD5820C237FD00897BA9 /* TableView+Helper+Extensions.swift in Sources */,
 				8D6042661DDB6C0C007BF405 /* Data.swift in Sources */,
 				8D6042731DDBAF50007BF405 /* FirstTableViewCell.swift in Sources */,
 				8D1299461DDCAE6100AB1F07 /* ListItemViewController.swift in Sources */,
